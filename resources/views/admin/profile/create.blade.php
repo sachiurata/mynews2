@@ -45,6 +45,9 @@
                             <textarea class="form-control" name="introduction" rows="20">{{ old('introduction') }}</textarea>
                         </div>
                     </div>
+                    <div>
+                        <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
+                    </div>
                     @csrf
                     <input type="submit" class="btn btn-primary" value="更新">
                 </form>    
