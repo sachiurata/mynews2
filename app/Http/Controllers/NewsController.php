@@ -15,7 +15,7 @@ class NewsController extends Controller
         if (count($posts) > 0) {
             $headline = $posts->shift();
         } else {
-            $headline->null;
+            $headline = null;
         }
             
         return view('news.index', ['headline' => $headline, 'posts' => $posts]);

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class News extends Model
 {
@@ -16,8 +17,14 @@ class News extends Model
         'body' => 'required',
      );
      
-     public function histories()
+     public function histories(): HasMany
      {
          return $this->hasMany('App\Models\History');
      }
+     
+     public function comments(): HasMany
+     {
+         return $this->hasMany(Comment::class);
+     }
+     
 }

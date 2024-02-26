@@ -43,3 +43,6 @@ Route::get('/', [PublicNewsController::class, 'index'])->name('news.index');
 
 use App\Http\Controllers\ProfileController as PublicProfileController;
 Route::get('profile', [PublicProfileController::class, 'index'])->name('profile.index');
+
+use App\Http\Controllers\CommentController;
+Route::post('/', [CommentController::class, 'create'])->name('comment.create');
