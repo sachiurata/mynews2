@@ -21,6 +21,9 @@ class ProfileController extends Controller
     {
         $this->validate($request, Profile::$rules);
         
+        //ver.9　での書き方
+        // $request->validate(Profile::$rules);
+        
         $profile = new Profile;
         $form = $request->all();
         

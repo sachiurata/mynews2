@@ -20,6 +20,10 @@ class News extends Model
      public function histories(): HasMany
      {
          return $this->hasMany('App\Models\History');
+         
+        //  ver.9 での書き方
+        //  return $this->hasMany(History::class);
+         
      }
      
      public function comments(): HasMany

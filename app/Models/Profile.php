@@ -22,5 +22,8 @@ class Profile extends Model
     public function profile_histories()
     {
         return $this->hasMany('App\Models\ProfileHistory');
+        
+        // ver.9 での書き方
+        // return $this->hasMany(ProfileHistory::class);
     }
 }

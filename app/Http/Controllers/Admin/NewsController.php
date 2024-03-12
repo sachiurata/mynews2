@@ -21,6 +21,9 @@ class NewsController extends Controller
     {
         // Validationを行う
         $this->validate($request, News::$rules);
+        
+        //ver.9　での書き方
+        // $request->validate(News::$rules);
 
         $news = new News;
         $form = $request->all();
